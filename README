@@ -1,0 +1,25 @@
+= Tailor hacks for better darcs -> git conversion
+Miklos Vajna <vmiklos-at-vmiklos-dot-hu>
+
+NOTE: This page is here only for historical reasons. You probably want to have
+a look at
+http://bazaar.launchpad.net/~bzr/bzr-fastimport/trunk/files/head%3A/exporters/darcs/[darcs-fast-export].
+
+The tailor subdir is a modified version of tailor, it contains several ugly
+hacks to work around problems during a darcs to git conversion. I plan to
+create proper fixs for these issues and submit them to upstream. Basically
+these hacks allowed me to convert a repo with more than 25.000 (relatively
+small, but containing conflicts) patches properly and in less than 8 hours (or
+so).
+
+The tests subdir contains repos with typical problems, they can be used later
+for proper bugfixes.
+
+The tailor-wrap repo is the 'main' repo, you should first get that one. It
+contains a wrapper for both darcs and git to work around several problems and
+to speed up the conversion. Read the `INSTALL` file in that repo on how to
+proceed.
+
+Download from https://github.com/downloads/vmiklos/tailor/tailor.tar.bz2[GitHub].
+
+// vim: ft=asciidoc
